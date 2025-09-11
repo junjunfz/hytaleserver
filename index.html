@@ -39,7 +39,6 @@
             overflow-x: auto;
             color: #666666;
             margin: 0 auto !important;
-			background: url(hytale-bg.webp) 0 0 repeat;
             background-attachment: fixed;
         }
         
@@ -925,6 +924,19 @@
             serverListElement.innerHTML = html;
         }
 
+	    (function() {
+	        var img = new Image();
+	        img.onload = function() {
+	            document.body.style.backgroundImage = "url(hytale-bg.webp)";
+	            document.body.style.backgroundRepeat = "repeat";
+	        };
+	        img.onerror = function() {
+	            console.warn("背景图加载失败");
+	        };
+	        img.src = "hytale-bg.webp";
+	    })();
+
+		
 		var _hmt = _hmt || [];
 		(function() {
 		  var hm = document.createElement("script");
