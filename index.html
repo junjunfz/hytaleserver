@@ -863,14 +863,6 @@
             });
         }
         
-        // 滚动到顶部
-        function scrollToTop() {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        }
-        
         // 加载服务器列表
         async function loadServerList() {
             try {
@@ -948,7 +940,13 @@
 	        img.src = "hytale-bg.webp";
 	    })();
 	});
-		
+        // 滚动到顶部
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }		
 		var _hmt = _hmt || [];
 		(function() {
 		  var hm = document.createElement("script");
